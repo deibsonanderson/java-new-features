@@ -1,4 +1,4 @@
-package br.com.estudo.java.seven;
+package br.com.features.java.seven;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -25,7 +25,7 @@ public class ExamplesJavaSeven {
 		System.out.println("======= end example java 7 =======");
 	}
 
-	public void separatorNumber() {
+	private void separatorNumber() {
 		System.out.println("******* start separator number *****");
 		
 		byte b = 1_2_7;
@@ -44,7 +44,7 @@ public class ExamplesJavaSeven {
 
 	}
 
-	public void literalBinary() {
+	private void literalBinary() {
 		System.out.println("******* start literal binary *****");
 		
 		final int notReady = 0b00;
@@ -65,7 +65,7 @@ public class ExamplesJavaSeven {
 		System.out.println("******* end literal binary *****\n");
 	}
 
-	public void stringOnSwitch() {
+	private void stringOnSwitch() {
 		System.out.println("******* start string on switch *****");
 		
 		final String dayWeek = "saturday";
@@ -90,7 +90,7 @@ public class ExamplesJavaSeven {
 		System.out.println("******* end start string on switch *****\n");
 	}
 
-	public void diamondAnotation() {
+	private void diamondAnotation() {
 		System.out.println("******* start diamond anotation *****");
 		System.out.println("create a collection more simple in java 7");
 
@@ -103,7 +103,7 @@ public class ExamplesJavaSeven {
 		System.out.println("******* end diamond anotation *****\n");
 	}
 
-	public void simpleVarargs() {
+	private void simpleVarargs() {
 		System.out.println("******* start simple varargs *****\n");
 		System.out.println("create a list more simple in java 7");
 		
@@ -122,11 +122,12 @@ public class ExamplesJavaSeven {
 		System.out.println("******* end simple varargs *****\n");
 	}
 	
-	public void multiCatch() {
+	private void multiCatch() {
 		System.out.println("******* start multi Catch ******");
 		try {
 			BufferedReader br = new BufferedReader(new FileReader("example.txt"));
 			Class<?> clazz = Class.forName("anyClass"); 
+			System.out.println("Type clazz:"+clazz+" | BufferedReader: "+br);
 		} catch (ClassNotFoundException | FileNotFoundException e) {
 			System.out.println("this is example two or more exceptions");
 			System.out.printf("exception message %s:", e.getMessage());
